@@ -5,6 +5,7 @@
         <title>スマホサイトメニュー</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="./style_smp.css">
+	<link href="https://unpkg.com/sanitize.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
             $(function(){
@@ -20,7 +21,7 @@
         </script>
 
     </head>
-　  <body>
+    <body>
     <header>
     <h1>サイトタイトル</h1>
         <div class="hamburger">
@@ -28,7 +29,6 @@
             <span></span>
             <span></span>
         </div>
-
 	<nav class="globalMenuSp">
     	<ul>
         	<li><a href="#">Menu01</a></li>
