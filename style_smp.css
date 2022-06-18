@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*スマホ用スクリーン*/
+@media screen and (max-width:600px){
+
+h1{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+/*ハンバーガーメニュー*/
+.hamburger{
+    width:42px;
+    height:42px;
+    border: 2px solid #bbb;
+    cursor: pointer;
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:3;
+}
+
+.hamburger span{
+    width:30px;
+    height: 2px;
+    background-color: #bbb;
+    position:absolute;
+    left:6px;
+    transition:1s;
+}
+
+.hamburger span:nth-child(1){
+    top:10px;
+}
+
+.hamburger span:nth-child(2){
+    top:20px;
+}
+
+.hamburger span:nth-child(3){
+    top:30px;
+}
+
+.hamburger.active span:nth-child(1){
+    background-color: #000;
+    transform: rotate(-45deg);
+    top:20px;
+    left:6px;
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3){
+    background-color: #000;
+    transform: rotate(45deg);
+    top:20px;
+}
+
+/*グローバルナビ*/
+
+nav.globalMenuSp{
+    background-color: #d4cfd4;
+    color:#fff;
+    width:100%;
+    text-align: center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    transform: translateX(100%);
+    transition:1s;
+}
+
+nav.globalMenuSp ul{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    list-style: none;
+}
+
+nav.globalMenuSp ul li{
+    padding:0;
+    width:100%;
+}
+
+nav.globalMenuSp ul li a{
+    padding:1em 0;
+    color:#fff;
+    display:block;
+    text-decoration: none;
+}
+
+nav.globalMenuSp ul li a:hover{
+    background-color: #bbb;
+}
+
+nav.globalMenuSp.active{
+    display: block;
+    transform:translateX(0%);
+}
+
+/*スマホ用スクリーンおわり*/
+}
+
+/*PC用スクリーン*/
+@media screen and (min-width:1025px){
+    .hamburger{
+        display:none;
+    }
+
+    header{
+        width:100%;
+        display:flex;
+        background-color: #fff;
+    }
+
+    h1{
+        width:30%;
+        margin:0;
+        padding:0;
+    }
+
+    nav.globalMenuSp{
+        width:70%;
+    }
+
+    nav.globalMenuSp ul{
+        display:flex;
+        justify-content: flex-end;
+        list-style: none;
+        font-size:1.2em;
+        margin:0;
+        padding:0;
+    }
+
+    nav.globalMenuSp ul li{
+        border-left: 2px solid #000;
+    }
+
+    nav.globalMenuSp ul li a{
+        padding:10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    nav.globalMenuSp ul li a:hover{
+        color:#000;
+        background-color: #d3d3d3;
+        border-bottom:3px solid #000 ;
+    }
+
+/*PC用スクリーンおわり*/
+}
